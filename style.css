@@ -16,6 +16,10 @@ h1{
 
 .row{
     display: flex;
+    
+}
+
+.hero__display{
     justify-content: space-between;
     align-items: center;
 }
@@ -25,22 +29,31 @@ h1{
     max-width: 1300px;
     margin:  0 auto;
 }
-.row{
-    display: flex;
-}
-
 .btn{
     display: inline-block;
     text-decoration: none;
-    padding: 0.75em 1.7em;
-    background-color: #53BA6F;
-    color: white;
     font-weight: 700;
-    box-shadow: 4.36px 4.36px 0px 2px #163A20;
     border-radius: 18px;
+    padding: 0.75em 1.7em;
+}
+.btn-contact{
+    border: 3px solid black;
 }
 
-.btn:hover{
+.btn-contact:hover{
+    color: white;
+    background-color: #53BA6F;
+}
+
+.btn-book{
+    background-color: #53BA6F;
+    color: white;
+    box-shadow: 4.36px 4.36px 0px 2px #163A20;
+    margin-right: 20px;
+    align-self: flex-start;
+}
+
+.btn-book:hover{
     color: black;
     background-color: white;
     border: 1px solid black;
