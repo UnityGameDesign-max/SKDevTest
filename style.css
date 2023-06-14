@@ -8,10 +8,35 @@ body{
     margin: 0;
     font-family: "Montserrat", sans-serif;
 }
+header{
+    padding: 1em 0;
+}
 
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.search-king-logo-container img{
+    width: 70%;
+}
+.nav__item + .nav__item{
+    margin-left: 1em;
+}
+.nav__item{
+    font-weight: 600;
+}
+.nav__list{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+}
 h1{
     font-size: 2.3rem;
-    font-weight: 800;
+    font-weight: 900;
 }
 
 .row{
@@ -33,7 +58,7 @@ h1{
     display: inline-block;
     text-decoration: none;
     font-weight: 700;
-    border-radius: 18px;
+    border-radius: 25px;
     padding: 0.75em 1.7em;
 }
 .btn-contact{
