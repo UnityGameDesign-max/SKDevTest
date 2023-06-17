@@ -9,4 +9,30 @@ hamburger.addEventListener("click", () => {
 document.querySelectorAll(".nav__item").forEach(n => n.addEventListener("click", () => {
     hamburger.classList.remove("active");
     navigationMenu.classList.remove("active");
-}))
+}));
+
+const isDisplayBlock = (items) => {
+    return items.style.display === "block" ? items.style.display = "none" : items.style.display = "block";
+}
+
+const Collapsibles = (screenSize) => {
+    let navigationItems = document.getElementsByClassName("collapse");
+    if(screenSize.matches){
+        for(let i=0; i<navigationItems.length; i++){
+            navigationItems[i].addEventListener("click", function(){
+                this.classList.toggle("collapse");
+                let content = this.nextElementSibling;
+                if (content.style.maxHeight){
+                    content.style.maxHeight = null;
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                }
+            });
+        }
+    }
+}
+
+let screenWidth = window.matchMedia("(max-width: 745px)");
+Collapsibles(screenWidth);
+screenWidth.addEventListener(Collapsibles);
+
