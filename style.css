@@ -63,11 +63,14 @@ header{
 .dropdown-content-about a:hover{
     color:#FF0000;
 }
+.about-dropdown:hover .dropdown-content-about,
 .services-dropdown:hover .dropdown-content-services{
     display: block;
 }
-.about-dropdown:hover .dropdown-content-about{
-    display: block;
+
+
+.first-child{
+    margin-top: 20px;
 }
 
 h1{
@@ -159,4 +162,21 @@ h1{
 
 .rating{
     font-size: 0.7rem;
+}
+
+@media only screen and (max-width: 1174px){
+
+    .nav__item .btn-book{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 910px){
+    .nav__item .btn-contact{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 745px){
+    
 }
