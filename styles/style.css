@@ -31,8 +31,11 @@ header{
     font-weight: 600;
     text-decoration: none;
     color: black;
-
+    margin-block: 5px;
+    cursor: pointer;
 }
+
+
 
 .nav__item:hover{
     color: #FF0000;
@@ -63,7 +66,8 @@ header{
     background-color: #53BA6F;
 }
 
-.dropdown-content-about, .dropdown-content-services {
+.dropdown-content-about, 
+.dropdown-content-services {
     display: none;
     position: absolute;
     background-color: white;
@@ -113,6 +117,7 @@ h1{
 .hero__display{
     justify-content: space-between;
     align-items: center;
+    padding-top: 3em;
 }
 
 .container{
@@ -250,6 +255,12 @@ h1{
     .hamBurger .bar{
         display: block;
     }
+    .nav__item:first-child{
+        margin-top: 12px;
+    }
+    .nav__item + .nav__item{
+        margin-left: unset;
+    }
     
     .nav__list{
         position: fixed;
@@ -261,14 +272,36 @@ h1{
         align-items: center;
         background-color: #ffffff;
         border-radius: 10px;
-        height: 180px;
+        height: 200px;
         width: 100%;
         text-align: center;
         transition: 0.4s;
     }
 
+    .collapse{
+        cursor: pointer;
+        transition: 0.4s;
+    }
+
+    .dropdown-content-about,
+    .dropdown-content-services{
+        display: none;
+        background-color: white;
+        min-width: 200px;
+        
+    }
+
+    .content{
+        /* display: none; */
+        
+    }
+
+    .about-dropdown:hover .dropdown-content-about,
+    .services-dropdown:hover .dropdown-content-services{
+        display: none;
+    }
     .nav__item{
-        font-size: 1.3rem;
+        font-size: 1.1rem;
     }
     .hamBurger.active .bar:nth-child(2) {
         opacity: 0;
@@ -282,10 +315,6 @@ h1{
         transform: translateY(-8px) rotate(-45deg);
     }
 
-    .dropdown-content-about, 
-    .dropdown-content-services{
-        
-    }
     .nav__list.active{
         left: 0;
         padding: 0;
