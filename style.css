@@ -44,12 +44,19 @@ header{
 
 .hamBurger .bar{
     display: none;
-    width: 25px;
+    width: 26px;
+    border-radius: 3px;
     height: 3px;
     margin: 5px auto;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
     background-color: black;
+}
+
+.hamBurger:hover .bar{
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #53BA6F;
 }
 
 .dropdown-content-about, .dropdown-content-services {
@@ -197,6 +204,12 @@ h1{
         width: 100%;
     }
     .hero__text-description{
+        padding: 4px 0px 4px 0px;
+        border-style: solid;
+        border-width: 7px 0px 7px 0px;
+        border-color: #53BA6F;
+    }
+    .hero__text-description{
         text-align: center;
     }
     .hero__img{
@@ -211,9 +224,13 @@ h1{
         text-align: center;
         max-width: 100%;
     }
+    .hero__text p{
+        margin-bottom: 10px;
+    }
     .hero__btn{
         flex-direction: column;
         align-items: center;
+        margin-top: 20px;
     }
     .hero__btn .btn-book{
         align-self: center;
@@ -227,9 +244,10 @@ h1{
 
     .nav__list{
         position: fixed;
-        left: -100%;
+        right: -100%;
         top: 7%;
-        gap: 0;
+        gap: 50px;
+        padding-block: 20px;
         flex-direction: column;
         background-color: #ffffff;
         border-radius: 10px;
